@@ -1,0 +1,55 @@
+*
+{
+    box-sizing: border-box;
+
+}
+
+body
+{
+	/* structure */
+	margin: 0;
+
+	/* presentation */
+	background-color: #ECF0F1;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2rem;
+}
+
+h1
+{
+	color:red;
+	letter-spacing: 0.2em;
+	text-align: left;
+}
+legend{
+	display: inline-block;
+	color: #277B86;
+	width: 15%;
+	text-align: center;
+}
+
+
+
+
+
+input{
+
+	font-size: 2rem;
+}
+
+ fieldset
+{
+	border-radius: 6px;
+	border: 1px solid	#277B86;
+}
+#fieldset2  {
+	padding-left: 4rem;
+}
+li, ul {
+	text-align: center;
+	list-style-type: none;
+	margin-left: 0;
+}
+
+
+

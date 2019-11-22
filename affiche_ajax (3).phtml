@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+</head>
+
+<body>
+Vendredi : <span id="meteo"></span>
+<br>
+<button onclick="getDegree(14)" id="getDegree14">Affichier 14°</button>
+<button onclick="getDegree(15)" id="getDegree15">Affichier 15°</button>
+<button onclick="getDegree(16)" id="getDegree16">Affichier 16°</button>
+ <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script>
+function getDegree(degree){
+	  $.ajax({  method: "POST", 
+				dataType:"json",
+				data:{'deg':degree},
+				url: "meteo_ajax.php", 
+				success: function(x){
+					$('#meteo').html('xxxxxxxxxx');
+				}
+		});
+	}
+</script>
+</body>
+
+</html>

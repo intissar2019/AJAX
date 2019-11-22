@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ex ajax</title>
+	<meta charset="utf-8">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	
+
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+</head>
+<body>
+	<main>
+	
+	<h1><i class="fas fa-flask"></i>Exercice AJAX</h1>
+	<fieldset id="fieldset1" class="container">
+		<p> <em>Résultats...</em></p>
+		
+	</fieldset>
+	<br>
+	<fieldset id="fieldset2" class="container">
+		<legend><i class="fas fa-question-circle"></i>Votre choix:</legend>
+		<input type="radio" name="souhait" value="Text" id="html" /> 
+		<label for="html">Récupérer un contenu HTML du serveur</label><br>
+        <input type="radio" name="souhait" value="Json" id="json" /> 
+        <label for="json">Récupérer un contenu JSON du serveur</label><br>
+         <input type="radio" name="souhait" value="Film" id="film" /> 
+        <label for="film">Récupérer les FILMS</label><br>
+        <input type="button" onclick="getData()" value="Executer" >
+		
+	</fieldset>
+	
+	
+<script>
+	
+function getData(){
+	var r=$('input[name="souhait"]:checked').val();
+               console.log(r);
+ $.ajax({url: "data"+r+".php", success: function(x){
+	$('#fieldset1').html(x);}});
+   }
+		/*
+				
+ul.append("<li class='span4'><div class='thumbnail'><img src='http://placehold.it/320x200' alt='ALT NAME'><div class='caption'><h6>"+val[titre_film]+"</h6><p>"+val[Genres]+"</p><p align='center'><img src="+val[lien]+"/></p></div></div></li>");
+			*/
+	
+
+	
+
+
+	
+
+
+	
+
+</script>
+</main>
+
+</body>
+</html>
